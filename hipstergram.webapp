@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "name": "Hipstergram",
+  "description": "Camera API and image manipulation webapp",
+  "icons": {
+    "16": "img/favicon.png",
+  },
+  "developer": {
+    "name": "Matt MacPherson and Fred Wenzel",
+    "url": "http://webdev.mozilla.org"
+  },
+  "installs_allowed_from": ["*"],
+  "orientation": "portrait",
+  "fullscreen": "true"
+}
