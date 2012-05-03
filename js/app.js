@@ -28,6 +28,8 @@
 
   $('#filters button').click(function(e) {
     e.preventDefault();
+    
+    Caman("#canvas").revert();
     Caman("#canvas", filters[$(this).data('filter')]);
   });
 
