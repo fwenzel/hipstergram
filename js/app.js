@@ -74,7 +74,11 @@ $(function() {
         deg = (parseInt(rotated[1]) + deg) % 360;
     }
 
-    node.style.MozTransform = 'rotate(' + deg + 'deg)';
+    if ([-270, -90, 90, 270].indexOf(deg) >= 0) {
+        node.style.MozTransform = 'rotate(' + deg + 'deg) scale(.7)';
+    } else {
+        node.style.MozTransform = 'rotate(' + deg + 'deg)';
+    }
   }
 
   $('#rotate button').click(function(e) {
