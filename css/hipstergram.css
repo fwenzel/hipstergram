@@ -1,6 +1,12 @@
+#canvas {
+    max-height: 90%;
+    max-width: 90%;
+}
+
 #target {
     display: none;
 }
+
 #filters {
     display: none;
 }
