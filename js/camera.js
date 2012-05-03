@@ -20,7 +20,10 @@
                     // Set img src to ObjectURL
                     showPicture.src = imgURL;
 
-                    $('#canvas-box').html('<img id="canvas" src="' + showPicture.src + '">');
+                    $('#canvas-box').html('<img id="canvas" style="display: none;" data-camanwidth="800" src="' + showPicture.src + '">');
+                    Caman("#canvas", function() {
+                        this.render();
+                    });
                 }
                 catch (e) {
                     try {
