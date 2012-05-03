@@ -43,7 +43,7 @@
                     }
                 }
 
-                $('#filters').show();
+                $('#filters,#rotate').show();
             }
         };
     }

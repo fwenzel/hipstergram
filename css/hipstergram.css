@@ -3,10 +3,6 @@
     max-width: 90%;
 }
 
-#target {
-    display: none;
-}
-
-#filters {
+#target,#filters,#rotate {
     display: none;
 }

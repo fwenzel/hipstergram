@@ -1,6 +1,6 @@
 "use strict";
 
-(function() {
+$(function() {
   var filters = {
     original: function() {
       this
@@ -59,4 +59,36 @@
     $(this).addClass('active');
   });
 
-})()
+  /* Rotation */
+  function rotate(node, deg) {
+    const rotate_re = /rotate\((-?\d+)deg\)/;
+
+    if (deg === undefined) {
+        node.style.MozTransform = '';
+        return;
+    }
+
+    var rotated = node.style.MozTransform.match(rotate_re);
+    if (rotated) {
+        // If already rotated, adjust angle.
+        deg = (parseInt(rotated[1]) + deg) % 360;
+    }
+
+    node.style.MozTransform = 'rotate(' + deg + 'deg)';
+  }
+
+  $('#rotate button').click(function(e) {
+    var degrees;
+
+    e.preventDefault();
+    switch ($(this).data('dir')) {
+    case 'left':
+      degrees = -90;
+      break;
+    case 'right':
+      degrees = 90;
+      break;
+    }
+    rotate($('#canvas')[0], degrees);
+  });
+});
