@@ -38,9 +38,9 @@
 
   var import_filters = ['crossProcess', 'lomo'];
   for each (var f in import_filters) {
-    filters[f] = function() {
-      this[f]().render()
-    };
+    filters[f] = function(filtername) {
+      return function() { this[filtername]().render() }
+    }(f);
   }
 
   $().ready(function() {
