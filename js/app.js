@@ -43,7 +43,13 @@
     }
   };
 
-  $('#filters button').click(function(e) {
+  $().ready(function() {
+    for (var i in filters) {
+      $('#filters').append('<button type="submit" class="btn" data-filter="' + i + '">' + i + '</button>');
+    }
+  });
+
+  $('#filters button').live('click', function(e) {
     e.preventDefault();
     
     Caman("#canvas").revert();
