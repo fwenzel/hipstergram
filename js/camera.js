@@ -19,9 +19,8 @@
  
                     // Set img src to ObjectURL
                     showPicture.src = imgURL;
- 
-                    // Revoke ObjectURL
-                    URL.revokeObjectURL(imgURL);
+
+                    $('#canvas-box').html('<img id="canvas" src="' + showPicture.src + '">');
                 }
                 catch (e) {
                     try {

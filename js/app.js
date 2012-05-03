@@ -28,7 +28,7 @@
 
   $('#filters button').click(function(e) {
     e.preventDefault();
-    Caman("example.jpg", "canvas", filters[$(this).data('filter')]);
+    Caman("#canvas", filters[$(this).data('filter')]);
   });
 
 })()
