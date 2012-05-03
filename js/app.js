@@ -23,6 +23,15 @@
         .vignette("50%", 60)
         .brightness(5)
         .render()
+    },
+
+    oldtv: function() {
+      this
+        .saturation(-60)
+        .contrast(30)
+        .noise(20)
+        .vignette("50%", 70)
+        .render()
     }
   };
 
@@ -31,6 +40,9 @@
     
     Caman("#canvas").revert();
     Caman("#canvas", filters[$(this).data('filter')]);
+
+    $('#filters button').removeClass('active');
+    $(this).addClass('active');
   });
 
 })()
