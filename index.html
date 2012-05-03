@@ -15,6 +15,7 @@
       }
     </style>
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/hipstergram.css" rel="stylesheet">
 
     <!-- Icons, manifest -->
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
@@ -38,16 +39,21 @@
 
     <div class="container">
       <h1>Filter ALL the THINGS</h1>
+
+      <input type="file" id="take-picture" accept="image/*">
+      <img src="" id="target">
+
       <canvas id="canvas"></canvas>
 
-      <a id="filter" href="#filter!">Filter this!</a>
+      <div id="filters">
+        <button type="submit" class="btn" data-filter="filter1">Filter1</button>
+      </div>
 
     </div> <!-- /container -->
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="js/zepto.min.js"></script>
     <script src="js/cayman.min.js"></script>
+    <script src="js/camera.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
