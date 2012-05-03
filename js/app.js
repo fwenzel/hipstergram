@@ -13,6 +13,14 @@
         .render()
     },
 
+    blackAndWhite: function() {
+      this
+        .gamma(100)
+        .contrast(30)
+        .saturation(-100)
+        .render()
+    },
+
     lomo: function() {
       this
         .brightness(15)
