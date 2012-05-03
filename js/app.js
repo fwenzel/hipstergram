@@ -36,7 +36,8 @@ $(function() {
     },
   };
 
-  var import_filters = ['crossProcess', 'lomo'];
+  var import_filters = ['crossProcess', 'lomo', 'sinCity', 'sunrise',
+                        'love', 'grungy'];
   for each (var f in import_filters) {
     filters[f] = function(filtername) {
       return function() { this[filtername]().render() }
