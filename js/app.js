@@ -21,18 +21,6 @@
         .render()
     },
 
-    lomo: function() {
-      this
-        .brightness(15)
-        .exposure(15)
-        .curves('rgb', [0, 0], [200, 0], [155, 255], [255, 255])
-        .saturation(-20)
-        .gamma(1.8)
-        .vignette("50%", 60)
-        .brightness(5)
-        .render()
-    },
-
     oldtv: function() {
       this
         .saturation(-60)
@@ -41,7 +29,15 @@
         .vignette("50%", 70)
         .render()
     }
+
   };
+
+  var import_filters = ['crossProcess', 'lomo'];
+  for each (var f in import_filters) {
+    filters[f] = function() {
+      this[f]().render()
+    };
+  }
 
   $().ready(function() {
     for (var i in filters) {
