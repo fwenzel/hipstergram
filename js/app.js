@@ -2,6 +2,11 @@
 
 (function() {
   var filters = {
+    original: function() {
+      this
+        .revert()
+    },
+
     age: function() {
       this
         .saturation(20)
@@ -28,8 +33,7 @@
         .noise(20)
         .vignette("50%", 70)
         .render()
-    }
-
+    },
   };
 
   var import_filters = ['crossProcess', 'lomo'];
