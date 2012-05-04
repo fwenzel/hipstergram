@@ -3,7 +3,7 @@
   "name": "Hipstergram",
   "description": "Camera API and image manipulation webapp",
   "icons": {
-    "16": "/img/favicon.png",
+    "16": "/img/favicon.png"
   },
   "developer": {
     "name": "Matt MacPherson and Fred Wenzel",
