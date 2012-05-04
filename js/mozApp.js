@@ -1,4 +1,3 @@
-
 // manage a webapp.
 // place <link rel="app-manifest" href="path-to-manifest.webapp"> in your <head>
 // mozApp.install() attempts installation
