@@ -6,7 +6,7 @@
 // mozApp.isRunning() indicates whether the app is currently installed and open
 var mozApp = (function() {
     var manLink = document.querySelector('link[rel="app-manifest"]'),
-        manifestURL = manLink.getAttribute('href');
+        manifestURL = manLink.href;
 
     var self = false;
 
