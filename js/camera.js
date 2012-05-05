@@ -1,7 +1,7 @@
 define(function () {
 
 var takePicture = document.querySelector("#take-picture"),
-    showPicture = document.querySelector("#target");
+    showPicture = document.querySelector("#canvas");
 
 if (takePicture && showPicture) {
     // Set events
@@ -21,7 +21,7 @@ if (takePicture && showPicture) {
                 // Set img src to ObjectURL
                 showPicture.src = imgURL;
 
-                $('#canvas-box').html('<img id="canvas" style="display: none;" data-camanwidth="800" src="' + showPicture.src + '">');
+                // Load image into Caman
                 Caman("#canvas", function() {
                     this.render();
                 });
@@ -30,13 +30,12 @@ if (takePicture && showPicture) {
                 try {
                     // Fallback if createObjectURL is not supported
                     var fileReader = new FileReader();
-                    fileReader.onload = function (event) {
+                    fileReader.onload = function(event) {
                         showPicture.src = event.target.result;
                     };
                     fileReader.readAsDataURL(file);
                 }
                 catch (e) {
-                    //
                     var error = document.querySelector("#error");
                     if (error) {
                         error.innerHTML = "Neither createObjectURL or FileReader are supported";
