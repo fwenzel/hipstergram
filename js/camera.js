@@ -1,4 +1,4 @@
-define(function () {
+define(['filters'], function(filters) {
 
 var takePicture = document.querySelector("#take-picture"),
     showPicture = document.querySelector("#canvas");
@@ -22,9 +22,7 @@ if (takePicture && showPicture) {
                 showPicture.src = imgURL;
 
                 // Load image into Caman
-                Caman("#canvas", function() {
-                    this.render();
-                });
+                Caman("#canvas", filters.original);
             }
             catch (e) {
                 try {

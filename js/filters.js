@@ -1,8 +1,7 @@
 define(function() {
     var filters = {
         original: function() {
-            this
-            .revert()
+            this.revert()
         },
 
         age: function() {
