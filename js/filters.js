@@ -37,10 +37,10 @@ define(function() {
     var import_filters = [
         'crossProcess', 'lomo', 'sinCity', 'sunrise', 'love', 'grungy'
     ];
-    for each (var f in import_filters) {
-        filters[f] = function(filtername) {
+    for (var i in import_filters) {
+        filters[import_filters[i]] = function(filtername) {
             return function() { this[filtername]().render() };
-        }(f);
+        }(import_filters[i]);
     }
 
     return filters;
